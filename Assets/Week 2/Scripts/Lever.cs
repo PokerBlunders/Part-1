@@ -19,6 +19,13 @@ public class Lever : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        door.SetActive(false);
+        if (door.activeInHierarchy)
+        {
+            door.SetActive(false);
+        }
+        else
+        {
+            door.SetActive(true);
+        }
     }
 }
