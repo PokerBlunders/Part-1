@@ -23,9 +23,4 @@ public class PlayerMove : MonoBehaviour
     {
         rigidbody.AddForce(direction * force * Time.deltaTime);
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Debug.Log("Player Hit Something");
-    }
 }
